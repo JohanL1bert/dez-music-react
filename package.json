@@ -50,7 +50,9 @@
     ]
   },
   "devDependencies": {
+    "@typescript-eslint/parser": "^5.17.0",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.6.1"
   }
 }
