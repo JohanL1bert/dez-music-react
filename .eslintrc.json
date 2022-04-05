@@ -8,7 +8,8 @@
     "plugin:react/recommended",
     "airbnb",
     "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:import/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -16,9 +17,10 @@
       "jsx": true
     },
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": ["./tsconfig.json"]
   },
-  "plugins": ["react", "@typescript-eslint", "prettier", "react-hooks"],
+  "plugins": ["react", "@typescript-eslint", "prettier", "react-hooks", "import"],
   "rules": {
     "no-console": 1,
     "curly": 1,
@@ -38,6 +40,34 @@
     "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "react/function-component-definition": 0,
     "import/prefer-default-export": "off",
+    "import/order": [
+      1,
+      {
+        "newlines-between": "never",
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "groups": ["builtin", "external", "internal", "parent", "sibling"],
+        "pathGroups": [
+          {
+            "pattern": "app/**",
+            "group": "parent"
+          },
+          {
+            "pattern": "common/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "entities/**",
+            "group": "sibling"
+          }
+        ]
+      }
+    ],
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["./*", "../*,"]
+      }
+    ],
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -57,6 +87,21 @@
         "track": ["Track"]
       }
     ],
+    "jsx-a11y/anchor-has-content": [
+      "warn",
+      {
+        "components": ["Anchor"]
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "warn",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
+      }
+    ],
+
     "react/jsx-child-element-spacing": 1,
     "react/self-closing-comp": [
       "error",
@@ -74,7 +119,8 @@
     },
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "paths": ["src"]
       }
     }
   }
