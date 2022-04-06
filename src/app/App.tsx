@@ -1,15 +1,13 @@
 import React from 'react';
 import { Header } from 'common/components/Header';
+import { LoginForm } from 'common/components/LoginForm';
 
 export const App = () => {
   return (
     <div className="App">
       <Header />
-      <main className="app__main">
-        <section className="login">
-          <div className="login__inner">1</div>
-        </section>
-      </main>
+      <LoginForm />
+      <main className="app__main">1</main>
     </div>
   );
 };
