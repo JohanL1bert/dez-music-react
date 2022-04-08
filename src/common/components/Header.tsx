@@ -1,4 +1,6 @@
 import React from 'react';
+/* import { HeaderLogin } from 'common/components/HeaderLogin'; */
+import { HeaderMain } from 'common/components/HeaderMain';
 
 export const Header = () => {
   return (
@@ -29,18 +31,7 @@ export const Header = () => {
         <div className="header__input">
           <input type="text" className="header__input-music" />
         </div>
-        <div className="header__account">
-          <div className="header__account__create-btn">
-            <a href="/#" aria-label="link to create acc" className="header__account__create-link">
-              Create account
-            </a>
-          </div>
-          <div className="header__account__login">
-            <a href="/#" aria-label="link to login acc" className="header__account__login-link">
-              Login
-            </a>
-          </div>
-        </div>
+        <HeaderMain />
       </div>
       <div className="header__line" />
     </header>
