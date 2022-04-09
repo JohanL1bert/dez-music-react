@@ -1,5 +1,6 @@
 import React from 'react';
 /* import { HeaderLogin } from 'common/components/HeaderLogin'; */
+import { NavLink } from 'react-router-dom';
 import { HeaderMain } from 'common/components/HeaderMain';
 
 export const Header = () => {
@@ -16,14 +17,22 @@ export const Header = () => {
                 </a>
               </li>
               <li className="header__nav__stream">
-                <a href="#/" aria-label="link to stream page" className="header__nav__stream-link">
-                  Stream
-                </a>
+                <NavLink
+                  to="/homepage"
+                  aria-label="link to stream page"
+                  className="header__nav__stream-link"
+                >
+                  Home
+                </NavLink>
               </li>
               <li className="header__nav__library">
-                <a href="#/" aria-label="link to libary page" className="header__nav__library-link">
-                  Library
-                </a>
+                <NavLink
+                  to="/favorites"
+                  aria-label="link to libary page"
+                  className="header__nav__library-link"
+                >
+                  Favorites
+                </NavLink>
               </li>
             </ul>
           </nav>

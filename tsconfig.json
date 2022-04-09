@@ -17,7 +17,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "src",
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "useDefineForClassFields": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { observer } from 'mobx-react';
-import { API } from 'entities/tracks/deezMusic';
+import { API } from 'entities/tracks/apiCall';
 
 export const Chart = observer(() => {
   const chartLoader = () => {
