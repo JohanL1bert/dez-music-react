@@ -1,0 +1,47 @@
+.header-main {
+  &__inner {
+    width: 468px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include resetUl;
+  }
+
+  &__item {
+    &:first-child > a {
+      cursor: pointer;
+      display: block;
+      background-image: url('../../images/message-icon.png');
+      background-size: contain;
+      width: 27px;
+      height: 26px;
+    }
+    &:nth-child(2) > a {
+      cursor: pointer;
+      display: block;
+      background-image: url('../../images/notation-icon.png');
+      width: 22px;
+      height: 19px;
+      background-size: contain;
+    }
+    &:nth-child(3) > a {
+      cursor: pointer;
+      display: block;
+      background-image: url('../../images/user-profile.png');
+      width: 28px;
+      height: 28px;
+      background-size: contain;
+    }
+    &:last-child > a {
+      cursor: pointer;
+      display: block;
+      background-image: url('../../images/setting-icon.png');
+      width: 37px;
+      height: 32px;
+      background-size: contain;
+    }
+  }
+}
