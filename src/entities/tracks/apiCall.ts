@@ -1,18 +1,34 @@
-import { makeObservable, observable } from 'mobx';
+import { action, makeObservable, observable } from 'mobx';
 
 class ApiCaller {
-  loading = true;
+  loading: boolean = true;
 
-  chartStore = {};
+  chartStore = [];
 
   constructor() {
     makeObservable(this, {
       loading: observable,
       chartStore: observable,
+      getChartTrack: action,
     });
   }
+
+  getChartTrack = async (queryParam: string) => {
+    this.loading = true;
+    try {
+      const respChartTrack: Response = await fetch(`https://api.deezer.com/chart/0/${queryParam}`, {
+        method: 'GET',
+        mode: 'no-cors',
+      });
+      console.log(respChartTrack);
+    } catch (error) {
+      console.warn(error);
+    } finally {
+      this.loading = false;
+    }
+  };
 }
 
-const API = new ApiCaller();
+const storeMobx = new ApiCaller();
 
-export { API };
+export { storeMobx };
