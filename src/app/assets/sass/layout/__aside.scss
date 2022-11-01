@@ -1,0 +1,49 @@
+.aside {
+  &__inner {
+  }
+  &__text {
+  }
+  &__header {
+  }
+  &__show-all {
+  }
+
+  &__artist {
+  }
+
+  &__music {
+    &__inner {
+    }
+    &__items {
+    }
+    &__item {
+    }
+    &__number {
+    }
+    &__info {
+    }
+    &__name {
+      &-artist {
+      }
+    }
+    &__play {
+      &-btn {
+      }
+    }
+  }
+}
+
+.artist {
+  &__inner {
+  }
+  &__items {
+  }
+  &__item {
+  }
+  &__img {
+  }
+  &__track-name {
+  }
+  &__name {
+  }
+}
