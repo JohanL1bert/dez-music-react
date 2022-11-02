@@ -1,0 +1,102 @@
+.header {
+  &__inner {
+    height: 60px;
+    background-color: $color-black;
+    color: white; //FIXME: Удалить
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__link {
+  }
+
+  &__line {
+    background: $color-gray-line;
+    height: 3px;
+  }
+
+  &__nav {
+    &__items {
+      @include resetUl;
+      display: flex;
+      margin-right: 12px;
+      align-items: center;
+      height: 100%;
+    }
+
+    &__logo {
+      background-image: url('../../images/logo.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 29px;
+      height: 29px;
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+
+    &__tittle {
+      margin-right: 64px;
+      &-link {
+        text-decoration: none;
+        color: $color-white;
+      }
+    }
+
+    &__stream {
+      margin-right: 70px;
+      &-link {
+        text-decoration: none;
+        color: $color-white;
+      }
+    }
+
+    &__library {
+      margin-right: 65px;
+      &-link {
+        text-decoration: none;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__input {
+    &-music {
+      width: 412px;
+      height: 30px;
+      background-color: $color-white;
+      opacity: 0.9;
+      box-shadow: 0px 0px 16.6909px rgba(0, 0, 0, 0.5);
+      border-radius: 4.76884px;
+    }
+  }
+
+  &__account {
+    display: flex;
+    justify-content: space-between;
+
+    &__create-btn {
+      width: 182px;
+      height: 32px;
+      background: linear-gradient(90.17deg, #e11720 -7.79%, #2ec0ee 91.79%);
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 103px;
+    }
+
+    &__create-link {
+      color: $color-white;
+      @include resetLinkSetFont;
+    }
+
+    &__login {
+      margin-right: 83px;
+    }
+
+    &__login-link {
+      color: $color-dark-yellow;
+      @include resetLinkSetFont;
+    }
+  }
+}

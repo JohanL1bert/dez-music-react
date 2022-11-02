@@ -1,0 +1,36 @@
+.favorites {
+  &__inner {
+    height: calc(100vh - 63px);
+    background-color: $color-black;
+  }
+  &__header {
+    height: 150px;
+    &-text {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 60px;
+      color: $color-white;
+      display: inline-block;
+      margin-left: 42px;
+      margin-top: 21px;
+    }
+
+    &-icon {
+      background-image: url('../../images/fav-info.svg');
+      width: 36px;
+      height: 32px;
+      background-size: contain;
+      display: inline-block;
+      margin-left: 9px;
+      cursor: pointer;
+
+      &__info {
+        display: none;
+      }
+    }
+  }
+
+  &__tracks {
+  }
+}
