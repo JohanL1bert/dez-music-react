@@ -1,8 +1,9 @@
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
-@import 'layout/app';
-@import 'layout/header';
-@import 'layout/header-main';
-@import 'layout/favorites';
-@import 'layout/login-form';
-@import 'layout/chart';
+@import 'abstracts/_variables';
+@import 'abstracts/_mixins';
+@import 'layout/__app';
+@import 'layout/__header';
+@import 'layout/__header-main';
+@import 'layout/__favorites';
+@import 'layout/__login-form';
+@import 'layout/__chart';
+@import 'layout/_aside';
